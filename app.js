@@ -23,7 +23,6 @@ try {
 
 //Let's write a message
 client.on('messageCreate', function (message) {
-    if (message.author.bot == false) {
-        message.reply('Hello');
-    }
+    message.reply('Hello');
 });
+
