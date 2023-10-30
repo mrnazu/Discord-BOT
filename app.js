@@ -1,14 +1,14 @@
-// importing the discord.js module
+//Importing the discord.js module
 const discord = require('discord.js');
 require('dotenv').config();
 
-// creating a new client
+//Creating a new client
 const client = new discord.Client({
-    intents: ['Guilds', 'DirectMessages', 'GuildInvites', 'GuildMessageReactions'],
+    intents: ['Guilds', 'DirectMessages', 'GuildMessages'],
     partials: ['CHANNEL', 'GUILD_MEMBER', 'MESSAGE', 'REACTION', 'USER']
 });
 
-// bot is online now
+//Bot is online now
 try {
     const connect = async function () {
         await client.login(process.env.TOKEN)
@@ -20,3 +20,10 @@ try {
 } catch (error) {
     console.log(`The "${client.user.username}" is NOT Online!'n${error}`);
 }
+
+//Let's write a message
+client.on('messageCreate', function (message) {
+    if (message.author.bot == false) {
+        message.reply('Hello');
+    }
+});
