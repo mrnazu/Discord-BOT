@@ -1,0 +1,24 @@
+{
+  "name": "discord-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "keywords": [
+    "bot"
+  ],
+  "author": "Samuel/Nazu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrnazu/Discord-BOT/issues"
+  },
+  "homepage": "https://github.com/mrnazu/Discord-BOT#readme",
+  "dependencies": {
+    "discord.js": "^14.13.0"
+  }
+}
